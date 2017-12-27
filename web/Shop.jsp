@@ -43,12 +43,6 @@ button {
    border-radius: 20px;
 }
 
-a {
-    text-decoration: none;
-    font-size: 16px;
-    color: black;
-}
-
 button:hover, a:hover {
     opacity: 0.7;
 }
@@ -178,8 +172,8 @@ img{
 
 #snackbar.show,#snackbar1.show {
     visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 2.5s 4.5s;
+    -webkit-animation: fadein 0.5s, fadeout 3.5s 5.5s;
+    animation: fadein 0.5s, fadeout 3.5s 5.5s;
 }
 
 @-webkit-keyframes fadein {

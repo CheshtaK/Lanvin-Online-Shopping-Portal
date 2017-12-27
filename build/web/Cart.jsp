@@ -104,13 +104,13 @@ body {
 
 .image{
     position: relative;
-    top: 30px;
-    left:20px;
+    top: 40px;
+    left:40px;
 }
 
 .brand{
     position: relative;
-    left: 230px;
+    left: 260px;
     top: -170px;
     font-size: 25px;
     font-weight: bold;
@@ -118,24 +118,30 @@ body {
 
 .description{
     position: relative;
-    left: 230px;
+    left: 260px;
     top: -160px;
     font-size: 15px;
 }
 .size{
     position: relative;
-    left: 230px;
+    left: 260px;
     top: -150px;
     font-size: 15px;
 }
 
+.price{
+    position: relative;
+    left: 260px;
+    top: -140px;
+    font-size: 18px;
+}
 .delbtn{
     height: 35px;
     width: 80px;
     font-size: 13px;
     position: relative;
-    left: 230px;
-    top: -130px;
+    left: 260px;
+    top: -120px;
     background-color: #660066;
     color: #fff;
     border-radius: 8px;
@@ -146,23 +152,11 @@ body {
     width: 120px;
     font-size: 11px;
     position: relative;
-    left: 330px;
-    top: -165px;
+    left: 360px;
+    top: -155px;
     background-color: #660066;
     color: #fff;
     border-radius: 8px;
-}
-
-#price{
-    position: relative;
-    left: 680px;
-    top: -175px;
-}
-
-#quantity{
-    position: relative;
-    left: 580px;
-    top: -230px;
 }
 
 #snackbar,#snackbar1 {
@@ -252,12 +246,11 @@ body {
         <div class="brand"><%= rs.getString(3)%></div>
         <div class="description"><%= rs.getString(4)%></div>
         <div class="size">Size:&nbsp;<%=rs.getString(8)%></div>
+        <div class="price">Rs:&nbsp;<%=rs.getString(5)%></div>
         <button class="delbtn" onclick="delItem(<%=rs.getString(6)%>)">Remove</button>
         <button class="wishbtn" onclick="wishItem(<%=rs.getString(6)%>)">Move to Wishlist</button>
         <div id="snackbar">Removed from Cart</div>
         <div id="snackbar1">Moved to Wishlist</div>
-        
-        <div><input type="text" id="price" value="<%= rs.getString(5)%>"/></div>
 
         <% 
         }

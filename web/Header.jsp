@@ -71,7 +71,7 @@
     <body>
         <div class="headerf">
 	<ul>
-		<li><a class="active" href="" style="font-size:20px;color:mediumvioletred;weight:bold">CK Fashions</a></li>
+		<li><a class="active" href="Home.jsp" style="font-size:25px;color:mediumvioletred;weight:bold">LANVIN</a></li>
 		<li class="dropdown">
 			<a href="javascript:void(0)" class="dropbtn">Men</a>
 			<div class="dropdown-content">

@@ -93,12 +93,6 @@ public final class Shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("   border-radius: 20px;\n");
       out.write("}\n");
       out.write("\n");
-      out.write("a {\n");
-      out.write("    text-decoration: none;\n");
-      out.write("    font-size: 16px;\n");
-      out.write("    color: black;\n");
-      out.write("}\n");
-      out.write("\n");
       out.write("button:hover, a:hover {\n");
       out.write("    opacity: 0.7;\n");
       out.write("}\n");
@@ -228,8 +222,8 @@ public final class Shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("#snackbar.show,#snackbar1.show {\n");
       out.write("    visibility: visible;\n");
-      out.write("    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\n");
-      out.write("    animation: fadein 0.5s, fadeout 2.5s 4.5s;\n");
+      out.write("    -webkit-animation: fadein 0.5s, fadeout 3.5s 5.5s;\n");
+      out.write("    animation: fadein 0.5s, fadeout 3.5s 5.5s;\n");
       out.write("}\n");
       out.write("\n");
       out.write("@-webkit-keyframes fadein {\n");
@@ -289,7 +283,7 @@ public final class Shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<nav class=\"w3-sidebar w3-bar-block w3-white w3-collapse w3-top\" style=\"z-index:3;width:250px\" id=\"mySidebar\">\n");
       out.write("  <div class=\"w3-container w3-display-container w3-padding-16\">\n");
       out.write("    <i onclick=\"w3_close()\" class=\"fa fa-remove w3-hide-large w3-button w3-display-topright\"></i>\n");
-      out.write("    <h1 id=\"heading\"><b>LANVIN</b></h1>\n");
+      out.write("    <h1 id=\"heading\"><b><a style=\"text-decoration: none\" href=\"Home.jsp\">LANVIN</a></b></h1>\n");
       out.write("  </div>\n");
       out.write("    \n");
       out.write("    \n");
@@ -522,7 +516,7 @@ public final class Shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</html>\n");
       out.write("</a>\n");
       out.write("            </div>\n");
-      out.write("            <a href=\"CartTry.jsp\"><i id=\"bag\" class=\"fa fa-shopping-bag\" style=\"font-size:36px;\"></i></a>\n");
+      out.write("            <a href=\"Cart.jsp\"><i id=\"bag\" class=\"fa fa-shopping-bag\" style=\"font-size:36px;\"></i></a>\n");
       out.write("        </div>\n");
       out.write("\n");
       out.write("    </body>\n");
