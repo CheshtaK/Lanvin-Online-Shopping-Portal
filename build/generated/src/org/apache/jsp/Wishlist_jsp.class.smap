@@ -1,0 +1,20 @@
+SMAP
+Wishlist_jsp.java
+JSP
+*S JSP
+*F
++ 0 Wishlist.jsp
+Wishlist.jsp
++ 1 NewHeader1.jsp
+NewHeader1.jsp
+*L
+5,109:54
+5#1,159:163
+113#0,7:321
+120,13:329
+132,2:342
+134,6:344,3
+140,2:362
+141,7:364
+147,23:371
+*E
