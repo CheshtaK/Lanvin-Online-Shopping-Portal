@@ -157,13 +157,13 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write(".image{\n");
       out.write("    position: relative;\n");
-      out.write("    top: 30px;\n");
-      out.write("    left:20px;\n");
+      out.write("    top: 40px;\n");
+      out.write("    left:40px;\n");
       out.write("}\n");
       out.write("\n");
       out.write(".brand{\n");
       out.write("    position: relative;\n");
-      out.write("    left: 230px;\n");
+      out.write("    left: 260px;\n");
       out.write("    top: -170px;\n");
       out.write("    font-size: 25px;\n");
       out.write("    font-weight: bold;\n");
@@ -171,24 +171,30 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write(".description{\n");
       out.write("    position: relative;\n");
-      out.write("    left: 230px;\n");
+      out.write("    left: 260px;\n");
       out.write("    top: -160px;\n");
       out.write("    font-size: 15px;\n");
       out.write("}\n");
       out.write(".size{\n");
       out.write("    position: relative;\n");
-      out.write("    left: 230px;\n");
+      out.write("    left: 260px;\n");
       out.write("    top: -150px;\n");
       out.write("    font-size: 15px;\n");
       out.write("}\n");
       out.write("\n");
+      out.write(".price{\n");
+      out.write("    position: relative;\n");
+      out.write("    left: 260px;\n");
+      out.write("    top: -140px;\n");
+      out.write("    font-size: 18px;\n");
+      out.write("}\n");
       out.write(".delbtn{\n");
       out.write("    height: 35px;\n");
       out.write("    width: 80px;\n");
       out.write("    font-size: 13px;\n");
       out.write("    position: relative;\n");
-      out.write("    left: 230px;\n");
-      out.write("    top: -130px;\n");
+      out.write("    left: 260px;\n");
+      out.write("    top: -120px;\n");
       out.write("    background-color: #660066;\n");
       out.write("    color: #fff;\n");
       out.write("    border-radius: 8px;\n");
@@ -199,23 +205,11 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    width: 120px;\n");
       out.write("    font-size: 11px;\n");
       out.write("    position: relative;\n");
-      out.write("    left: 330px;\n");
-      out.write("    top: -165px;\n");
+      out.write("    left: 360px;\n");
+      out.write("    top: -155px;\n");
       out.write("    background-color: #660066;\n");
       out.write("    color: #fff;\n");
       out.write("    border-radius: 8px;\n");
-      out.write("}\n");
-      out.write("\n");
-      out.write("#price{\n");
-      out.write("    position: relative;\n");
-      out.write("    left: 680px;\n");
-      out.write("    top: -175px;\n");
-      out.write("}\n");
-      out.write("\n");
-      out.write("#quantity{\n");
-      out.write("    position: relative;\n");
-      out.write("    left: 580px;\n");
-      out.write("    top: -230px;\n");
       out.write("}\n");
       out.write("\n");
       out.write("#snackbar,#snackbar1 {\n");
@@ -297,7 +291,7 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<nav class=\"w3-sidebar w3-bar-block w3-white w3-collapse w3-top\" style=\"z-index:3;width:250px\" id=\"mySidebar\">\n");
       out.write("  <div class=\"w3-container w3-display-container w3-padding-16\">\n");
       out.write("    <i onclick=\"w3_close()\" class=\"fa fa-remove w3-hide-large w3-button w3-display-topright\"></i>\n");
-      out.write("    <h1 id=\"heading\"><b>LANVIN</b></h1>\n");
+      out.write("    <h1 id=\"heading\"><b><a style=\"text-decoration: none\" href=\"Home.jsp\">LANVIN</a></b></h1>\n");
       out.write("  </div>\n");
       out.write("    \n");
       out.write("    \n");
@@ -349,9 +343,38 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  \n");
       out.write("    \n");
       out.write("    \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
-      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>\n");
+      out.write("  <a href=\"About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
+      out.write("  <a href=\"Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
+      out.write("  ");
+
+    HttpSession s = request.getSession(false);
+    if( s!= null){
+        String n = (String)s.getAttribute("username");
+        if( n!= null){
+  
+      out.write("\n");
+      out.write("  <a href=\"http://localhost:8080/LanvinF/LogOutServlet\" class=\"w3-bar-item w3-button w3-padding\">Sign Out</a>                \n");
+      out.write("  ");
+
+        }
+        else if(n == null){
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+            session.invalidate();
+        }
+    }
+    else{
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+    }
+  
+      out.write("\n");
       out.write("  <a href=\"RegistrationPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Sign Up</a>\n");
       out.write("</nav>\n");
       out.write("\n");
@@ -476,6 +499,9 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"size\">Size:&nbsp;");
       out.print(rs.getString(8));
       out.write("</div>\n");
+      out.write("        <div class=\"price\">Rs:&nbsp;");
+      out.print(rs.getString(5));
+      out.write("</div>\n");
       out.write("        <button class=\"delbtn\" onclick=\"delItem(");
       out.print(rs.getString(6));
       out.write(")\">Remove</button>\n");
@@ -484,10 +510,6 @@ public final class Cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write(")\">Move to Wishlist</button>\n");
       out.write("        <div id=\"snackbar\">Removed from Cart</div>\n");
       out.write("        <div id=\"snackbar1\">Moved to Wishlist</div>\n");
-      out.write("        \n");
-      out.write("        <div><input type=\"text\" id=\"price\" value=\"");
-      out.print( rs.getString(5));
-      out.write("\"/></div>\n");
       out.write("\n");
       out.write("        ");
  

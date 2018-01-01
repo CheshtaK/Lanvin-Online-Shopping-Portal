@@ -87,9 +87,30 @@
   
     
     
-  <a href="http://localhost:8080/LanvinF/About.jsp" class="w3-bar-item w3-button w3-padding">About</a> 
-  <a href="http://localhost:8080/LanvinF/Contact.jsp" class="w3-bar-item w3-button w3-padding">Contact</a> 
-  <a href="LoginPage.jsp" class="w3-bar-item w3-button w3-padding">Log In</a>
+  <a href="About.jsp" class="w3-bar-item w3-button w3-padding">About</a> 
+  <a href="Contact.jsp" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <%
+    HttpSession s = request.getSession(false);
+    if( s!= null){
+        String n = (String)s.getAttribute("username");
+        if( n!= null){
+  %>
+  <a href="http://localhost:8080/LanvinF/LogOutServlet" class="w3-bar-item w3-button w3-padding">Sign Out</a>                
+  <%
+        }
+        else if(n == null){
+  %>
+  <a href="LoginPage.jsp" class="w3-bar-item w3-button w3-padding">Log In</a>                
+  <%
+            session.invalidate();
+        }
+    }
+    else{
+  %>
+  <a href="LoginPage.jsp" class="w3-bar-item w3-button w3-padding">Log In</a>                
+  <%
+    }
+  %>
   <a href="RegistrationPage.jsp" class="w3-bar-item w3-button w3-padding">Sign Up</a>
 </nav>
 

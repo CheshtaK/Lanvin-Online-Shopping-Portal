@@ -133,7 +133,7 @@ body{
     
     <body>
         <div class="background">
-	<form action="http://localhost:8080/LanvinF/ValidationServlet" method="post">
+	<form action="http://localhost:8080/LanvinF/RegisterServlet" method="post">
 	<div class="heading" style="font-size:35px;weight:bold;font-family:Garamond;color:mediumvioletred">Signup with Lanvin</div>
 	<input id="FirstName" type="text" name="fname" style="font-size:15px;font-family:Bookman" placeholder=" First Name" autofocus required>
 	<input id="LastName" type="text" name="lname" style="font-size:15px;font-family:Bookman" placeholder=" Last Name" required>

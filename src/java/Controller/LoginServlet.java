@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
 public class LoginServlet extends HttpServlet 
@@ -54,8 +55,8 @@ public class LoginServlet extends HttpServlet
                     request.setAttribute("username1",username1);
                     request.setAttribute("password1",password1);
                     
-                    Cookie ck1 = new Cookie("username",username1);
-                    response.addCookie(ck1);
+                    HttpSession session = request.getSession();
+                    session.setAttribute("username",username1);
                     
                     response.sendRedirect("http://localhost:8080/LanvinF/Home.jsp");
 		}

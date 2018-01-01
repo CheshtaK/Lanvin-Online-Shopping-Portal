@@ -113,7 +113,29 @@
 		</li>
 		<li><a href="http://localhost:8080/LanvinF/About.jsp">About</a></li>
 		<li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</li>
-		<li><a href="http://localhost:8080/LanvinF/LoginPage.jsp">Log in</a>
+                <%
+                    HttpSession s = request.getSession(false);
+                    if( s!= null){
+                        String n = (String)s.getAttribute("username");
+                        if( n!= null){
+                %>
+                <li><a href="http://localhost:8080/LanvinF/LogOutServlet">Sign out</a>
+                <%
+                        }
+                        else if(n == null){
+                %>
+                <li><a href="http://localhost:8080/LanvinF/LoginPage.jsp">Log in</a>
+                <%
+                            session.invalidate();
+                        }
+                    }
+                    else{
+                %>
+                <li><a href="http://localhost:8080/LanvinF/LoginPage.jsp">Log in</a>
+                <%
+                    }
+                %>
+		
 		<li><a href="http://localhost:8080/LanvinF/RegistrationPage.jsp">Sign Up</a>
 	</ul>
         </div>

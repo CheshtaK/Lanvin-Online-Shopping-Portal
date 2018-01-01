@@ -5,14 +5,6 @@
         <servlet-class>Controller.LoginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>Controller.RegisterServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ValidationServlet</servlet-name>
-        <servlet-class>Controller.ValidationServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>BagServlet</servlet-name>
         <servlet-class>Controller.BagServlet</servlet-class>
     </servlet>
@@ -72,17 +64,17 @@
         <servlet-name>AddToWishlist</servlet-name>
         <servlet-class>Controller.AddToWishlist</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>Controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOutServlet</servlet-name>
+        <servlet-class>Controller.LogOutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/RegisterServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ValidationServlet</servlet-name>
-        <url-pattern>/ValidationServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BagServlet</servlet-name>
@@ -143,6 +135,14 @@
     <servlet-mapping>
         <servlet-name>AddToWishlist</servlet-name>
         <url-pattern>/AddToWishlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOutServlet</servlet-name>
+        <url-pattern>/LogOutServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
