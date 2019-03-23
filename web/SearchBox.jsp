@@ -67,7 +67,7 @@
     </head>
     <body>
         <div class="search-box-wrapper">
-            <input type="text" placeholder="Search..." class="search-box-input">
+            <input type="text" onfocus="" placeholder="Search..." class="search-box-input">
             <button class="search-box-button">&#128269;</button>
             <div>
                 <a href="Wishlist.jsp"><%@include file="Heart.jsp" %></a>

@@ -105,7 +105,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<nav class=\"w3-sidebar w3-bar-block w3-white w3-collapse w3-top\" style=\"z-index:3;width:250px\" id=\"mySidebar\">\n");
       out.write("  <div class=\"w3-container w3-display-container w3-padding-16\">\n");
       out.write("    <i onclick=\"w3_close()\" class=\"fa fa-remove w3-hide-large w3-button w3-display-topright\"></i>\n");
-      out.write("    <h1 id=\"heading\"><b>LANVIN</b></h1>\n");
+      out.write("    <h1 id=\"heading\"><b><a style=\"text-decoration: none\" href=\"Home.jsp\">LANVIN</a></b></h1>\n");
       out.write("  </div>\n");
       out.write("    \n");
       out.write("    \n");
@@ -115,21 +115,21 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <a onclick=\"men()\" href=\"javascript:void(0)\" class=\"w3-button w3-block w3-white w3-left-align\">Men <i class=\"fa fa-caret-down\"></i>\n");
       out.write("    </a>\n");
       out.write("      <div id=\"men1\" class=\"w3-bar-block w3-hide w3-padding-large w3-medium\">\n");
-      out.write("      <a href=\"T-Shirts.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>T-Shirts</a>\n");
-      out.write("      <a href=\"CasualShirts.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Casual Shirts</a>\n");
-      out.write("      <a href=\"FormalShirts.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Formal Shirts</a>\n");
-      out.write("      <a href=\"Sweaters.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Sweaters</a>\n");
-      out.write("      <a href=\"Jackets.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jackets</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=TS\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>T-Shirts</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=CasualS\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Casual Shirts</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=FormalS\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Formal Shirts</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Sweater\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Sweaters</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Jacket\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jackets</a>\n");
       out.write("    </div>\n");
       out.write("    \n");
       out.write("      \n");
       out.write("      <a onclick=\"women()\" href=\"javascript:void(0)\" class=\"w3-button w3-block w3-white w3-left-align\">Women <i class=\"fa fa-caret-down\"></i>\n");
       out.write("    </a>\n");
       out.write("      <div id=\"women1\" class=\"w3-bar-block w3-hide w3-padding-large w3-medium\">\n");
-      out.write("      <a href=\"KurtaSuits.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Kurtas & Suits</a>\n");
-      out.write("      <a href=\"Dresses.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dresses & Jumpsuits</a>\n");
-      out.write("      <a href=\"Jeans.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jeans & Jeggings</a>\n");
-      out.write("      <a href=\"Shrugs.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Shrugs</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=KS\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Kurtas & Suits</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=DJ\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dresses & Jumpsuits</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=JJ\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jeans & Jeggings</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Shrug\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Shrugs</a>\n");
       out.write("    </div>\n");
       out.write("    \n");
       out.write("      \n");
@@ -137,29 +137,58 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      Kids <i class=\"fa fa-caret-down\"></i>\n");
       out.write("    </a>\n");
       out.write("      <div id=\"kids1\" class=\"w3-bar-block w3-hide w3-padding-large w3-medium\">\n");
-      out.write("      <a href=\"T-ShirtsK.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>T-Shirts</a>\n");
-      out.write("      <a href=\"DressesK.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dresses</a>\n");
-      out.write("      <a href=\"IndianK.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Indian Wear</a>\n");
-      out.write("      <a href=\"DungareesK.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dungarees</a>\n");
-      out.write("      <a href=\"JeansK.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jeans & Trousers</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=TSK\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>T-Shirts</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Dress\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dresses</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Indian\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Indian Wear</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Dungarees\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Dungarees</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Jeans\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Jeans & Trousers</a>\n");
       out.write("    </div>\n");
       out.write("    \n");
       out.write("      \n");
       out.write("      <a onclick=\"hnl()\" href=\"javascript:void(0)\" class=\"w3-button w3-block w3-white w3-left-align\">Home&Living <i class=\"fa fa-caret-down\"></i>\n");
       out.write("    </a>\n");
       out.write("    <div id=\"hnl1\" class=\"w3-bar-block w3-hide w3-padding-large w3-medium\">\n");
-      out.write("      <a href=\"Bedsheets.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Bedsheets</a>\n");
-      out.write("      <a href=\"Towels.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Bath Towels</a>\n");
-      out.write("      <a href=\"Clocks.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Clocks</a>\n");
-      out.write("      <a href=\"Lamps.jsp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Lamps</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Bed\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Bedsheets</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Towel\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Bath Towels</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Clock\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Clocks</a>\n");
+      out.write("      <a href=\"Shop.jsp?cat=Lamp\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-caret-right w3-margin-right\"></i>Lamps</a>\n");
       out.write("    </div>\n");
       out.write("  </div>\n");
       out.write("  \n");
       out.write("    \n");
       out.write("    \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
-      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>\n");
+      out.write("  <a href=\"About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
+      out.write("  <a href=\"Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
+      out.write("  ");
+
+    HttpSession s = request.getSession(false);
+    if( s!= null){
+        String n = (String)s.getAttribute("username");
+        if( n!= null){
+  
+      out.write("\n");
+      out.write("  <a href=\"http://localhost:8080/LanvinF/LogOutServlet\" class=\"w3-bar-item w3-button w3-padding\">Sign Out</a>                \n");
+      out.write("  ");
+
+        }
+        else if(n == null){
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+            session.invalidate();
+        }
+    }
+    else{
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+    }
+  
+      out.write("\n");
       out.write("  <a href=\"RegistrationPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Sign Up</a>\n");
       out.write("</nav>\n");
       out.write("\n");
@@ -210,11 +239,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    }\n");
       out.write("}\n");
       out.write("\n");
-      out.write("// Click on the \"Jeans\" link on page load to open the accordion for demo purposes\n");
       out.write("document.getElementById(\"myBtn\").click();\n");
       out.write("\n");
       out.write("\n");
-      out.write("// Script to open and close sidebar\n");
       out.write("function w3_open() {\n");
       out.write("    document.getElementById(\"mySidebar\").style.display = \"block\";\n");
       out.write("    document.getElementById(\"myOverlay\").style.display = \"block\";\n");
@@ -302,7 +329,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <input type=\"text\" placeholder=\"Search...\" class=\"search-box-input\">\n");
       out.write("            <button class=\"search-box-button\">&#128269;</button>\n");
       out.write("            <div>\n");
-      out.write("                ");
+      out.write("                <a href=\"Wishlist.jsp\">");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -315,7 +342,7 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  width: 100px;\n");
       out.write("  height: 100px;\n");
       out.write("  position: absolute;\n");
-      out.write("  left: 335px;\n");
+      out.write("  left: 350px;\n");
       out.write("  top: 50%;\n");
       out.write("  transform: translate(-50%, -50%);\n");
       out.write("  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;\n");
@@ -342,9 +369,9 @@ public final class Home_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"heart\"></div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
-      out.write("\n");
+      out.write("</a>\n");
       out.write("            </div>\n");
-      out.write("            <a href=\"CartTry.jsp\"><i id=\"bag\" class=\"fa fa-shopping-bag\" style=\"font-size:36px;\"></i></a>\n");
+      out.write("            <a href=\"Cart.jsp\"><i id=\"bag\" class=\"fa fa-shopping-bag\" style=\"font-size:36px;\"></i></a>\n");
       out.write("        </div>\n");
       out.write("\n");
       out.write("    </body>\n");

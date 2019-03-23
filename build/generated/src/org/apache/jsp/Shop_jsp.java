@@ -335,9 +335,38 @@ public final class Shop_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  \n");
       out.write("    \n");
       out.write("    \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
-      out.write("  <a href=\"http://localhost:8080/LanvinF/Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
-      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>\n");
+      out.write("  <a href=\"About.jsp\" class=\"w3-bar-item w3-button w3-padding\">About</a> \n");
+      out.write("  <a href=\"Contact.jsp\" class=\"w3-bar-item w3-button w3-padding\">Contact</a> \n");
+      out.write("  ");
+
+    HttpSession s = request.getSession(false);
+    if( s!= null){
+        String n = (String)s.getAttribute("username");
+        if( n!= null){
+  
+      out.write("\n");
+      out.write("  <a href=\"http://localhost:8080/LanvinF/LogOutServlet\" class=\"w3-bar-item w3-button w3-padding\">Sign Out</a>                \n");
+      out.write("  ");
+
+        }
+        else if(n == null){
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+            session.invalidate();
+        }
+    }
+    else{
+  
+      out.write("\n");
+      out.write("  <a href=\"LoginPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Log In</a>                \n");
+      out.write("  ");
+
+    }
+  
+      out.write("\n");
       out.write("  <a href=\"RegistrationPage.jsp\" class=\"w3-bar-item w3-button w3-padding\">Sign Up</a>\n");
       out.write("</nav>\n");
       out.write("\n");

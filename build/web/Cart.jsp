@@ -247,12 +247,13 @@ body {
         <div class="description"><%= rs.getString(4)%></div>
         <div class="size">Size:&nbsp;<%=rs.getString(8)%></div>
         <div class="price">Rs:&nbsp;<%=rs.getString(5)%></div>
+        
         <button class="delbtn" onclick="delItem(<%=rs.getString(6)%>)">Remove</button>
         <button class="wishbtn" onclick="wishItem(<%=rs.getString(6)%>)">Move to Wishlist</button>
         <div id="snackbar">Removed from Cart</div>
         <div id="snackbar1">Moved to Wishlist</div>
-
-        <% 
+        
+        <%                         
         }
             st1 = con.prepareStatement("insert into OrderF values(?,?,?)");
             st1.setInt(1,Total);
@@ -268,10 +269,8 @@ body {
 
         %>
         
-        
-        
         <button class="wishlist"><a style="text-decoration: none" href="Wishlist.jsp">Wishlist</a></button>
-        <button class="checkout"><a style="text-decoration: none" href="Order.jsp"><span>Proceed to Checkout</span></a></button>
+        <button class="checkout"><a style="text-decoration: none" href="Order.jsp"><span>Proceed to Checkout</span></a></button>        
         </div>
 </form>
     </body>
@@ -281,24 +280,6 @@ body {
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
     <script  type="text/javascript">
-
-    $(function () {
-    $('.add').on('click',function(){
-        var $qty=$(this).closest('p').find('.qty');
-        var currentVal = parseInt($qty.val());
-        if (!isNaN(currentVal)) {
-            $qty.val(currentVal + 1);
-        }
-    });
-    $('.minus').on('click',function(){
-        var $qty=$(this).closest('p').find('.qty');
-        var currentVal = parseInt($qty.val());
-        if (!isNaN(currentVal) && currentVal > 0) {
-            $qty.val(currentVal - 1);
-        }
-    });
-});
-
     function delItem(Id){
         var f1 = document.form2;
         f1.method="post";
@@ -320,15 +301,6 @@ body {
         x.className = "show";
         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     } 
-    
-    function update(Id){
-        var qty = document.getElementsByName("Qty")[0].value;
-        var f1 = document.form2;
-        f1.method="post";
-        f1.action='http://localhost:8080/LanvinF/UpdateCart?Id='+Id+"&qty="+qty;
-        f1.submit();
-    }
-
 </script>
     
 </html>
